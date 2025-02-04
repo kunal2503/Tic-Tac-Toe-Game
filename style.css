@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: rgb(130, 137, 138);
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /*for align verticaly center*/ 
+    gap: 2rem;  
+}
+.status{
+    font-size: 2rem; ;
+
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    cursor: pointer;
+}
+.box{
+    margin: 0.5rem;
+    background-color: rgba(205, 203, 201, 0.619);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 800;
+    height: 8vmax;
+    width: 8vmax;
+    border: 1px solid rgb(165, 165, 160);
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+    border-radius: 0.5rem;
+}
+.box:hover{
+    background-color: rgb(210, 208, 206);
+}
+.reset-btn{
+    /* padding: 1rem; */
+    background-color: rgb(43, 87, 67);
+    height: 2.5rem;
+    width: 8rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.reset-btn:hover{
+    background-color: rgb(50, 109, 82);
+}
+.disabled{
+    pointer-events: none;
+}
+@keyframes winner-animation {
+    0% { background-color: rgb(32, 71, 84); }
+50% { background-color: rgb(37, 108, 112); }
+100% { background-color: rgb(16, 78, 99); }
+}
+
+
+.winner {
+    animation: winner-animation 0.5s infinite;
+}
